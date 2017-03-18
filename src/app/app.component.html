@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<div class="main-content">
+  <h1 id="search-header">Search Flickr</h1>
+  <input type="text" class="form-control" (keydown)="onInputKeyDown($event, search.value)" #search>
+  <button class="btn btn-primary" (click)="onSearch(search.value)">Search</button>
+</div>
+<app-photo-list></app-photo-list>
